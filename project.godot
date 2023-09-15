@@ -11,9 +11,21 @@ config_version=5
 [application]
 
 config/name="Honey Chilli Waale"
+run/main_scene="res://Scenes/Prefabs/LevelPrefab/levels.tscn"
 config/features=PackedStringArray("4.1", "C#", "Forward Plus")
 config/icon="res://Art/icon.svg"
 
 [dotnet]
 
 project/assembly_name="Honey Chilli Waale"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/codeandweb.texturepacker/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled.android=true
+import/blender/enabled.web=true
+import/fbx/enabled.android=true
+import/fbx/enabled.web=true

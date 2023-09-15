@@ -1,9 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnn63bp8fpk4v"]
+[gd_scene load_steps=3 format=3 uid="uid://bnn63bp8fpk4v"]
 
-[ext_resource type="Texture2D" uid="uid://d2s40kdnl8mu6" path="res://Art/Symbols.png" id="2_g6okm"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hx1wf"]
+blend_mode = 2
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0l0bq"]
+resource_local_to_scene = true
+load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_g6okm")
+material = SubResource("CanvasItemMaterial_hx1wf")
+texture = SubResource("CompressedTexture2D_0l0bq")
 region_enabled = true
+region_rect = Rect2(0, 0, 256, 256)
