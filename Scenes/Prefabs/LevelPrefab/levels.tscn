@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0amxdxijsleu"]
+
+[ext_resource type="Script" path="res://Scripts/Level/Levels.cs" id="1_1j6si"]
+[ext_resource type="Script" path="res://Scripts/Level/LevelData.cs" id="2_bh7jl"]
+[ext_resource type="Texture2D" uid="uid://dlydyu8tp0fwp" path="res://Art/icon.svg" id="3_ytkxn"]
+
+[node name="Levels" type="Node" node_paths=PackedStringArray("_levels")]
+script = ExtResource("1_1j6si")
+_levels = [NodePath("LevelDataTemplate")]
+
+[node name="LevelDataTemplate" type="Node" parent="."]
+script = ExtResource("2_bh7jl")
+_baseImage = ExtResource("3_ytkxn")
+_winningSymbols = [ExtResource("3_ytkxn")]
+_winningIndex = [null]
