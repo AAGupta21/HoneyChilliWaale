@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://dbyyldddhorb5"]
+
+[ext_resource type="PackedScene" uid="uid://caqdml7bejpvi" path="res://Art/SymbolScenes/s_6.tscn" id="1_q7t4m"]
+[ext_resource type="PackedScene" uid="uid://p5t2w4got0xq" path="res://Art/SymbolScenes/s_20.tscn" id="2_nt0y8"]
+[ext_resource type="PackedScene" uid="uid://c4mddb0qhvk36" path="res://Art/SymbolScenes/s_25.tscn" id="3_d6cx2"]
+[ext_resource type="PackedScene" uid="uid://doogtxjwq080i" path="res://Art/SymbolScenes/s_32.tscn" id="4_qao4t"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6mofg"]
+resource_local_to_scene = true
+load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pow6a"]
+resource_local_to_scene = true
+load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xbq3x"]
+resource_local_to_scene = true
+load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dyxqg"]
+resource_local_to_scene = true
+load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
+
+[node name="Level4" type="Sprite2D"]
+
+[node name="S6" parent="." instance=ExtResource("1_q7t4m")]
+position = Vector2(-118, 2.00001)
+rotation = -2.19131
+texture = SubResource("CompressedTexture2D_6mofg")
+
+[node name="S20" parent="." instance=ExtResource("2_nt0y8")]
+position = Vector2(9, -7)
+texture = SubResource("CompressedTexture2D_pow6a")
+
+[node name="S25" parent="." instance=ExtResource("3_d6cx2")]
+position = Vector2(41, 74)
+rotation = 3.16412
+texture = SubResource("CompressedTexture2D_xbq3x")
+
+[node name="S32" parent="." instance=ExtResource("4_qao4t")]
+position = Vector2(-99, 19)
+rotation = 0.214416
+texture = SubResource("CompressedTexture2D_dyxqg")

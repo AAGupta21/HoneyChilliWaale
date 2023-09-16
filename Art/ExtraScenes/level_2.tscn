@@ -24,19 +24,19 @@ load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.
 [node name="Level2" type="Sprite2D"]
 
 [node name="S10" parent="." instance=ExtResource("1_h4day")]
-position = Vector2(25, -33)
+position = Vector2(76.8642, -103)
 texture = SubResource("CompressedTexture2D_a80d4")
 
 [node name="S16" parent="." instance=ExtResource("2_tpqqh")]
-position = Vector2(-132, 46)
+position = Vector2(-80.1358, -24)
 rotation = 3.13874
 texture = SubResource("CompressedTexture2D_f1l3l")
 
 [node name="S17" parent="." instance=ExtResource("3_dkn20")]
-position = Vector2(16, -13)
+position = Vector2(67.8642, -83)
 texture = SubResource("CompressedTexture2D_a17k0")
 
 [node name="S24" parent="." instance=ExtResource("4_vbpny")]
-position = Vector2(-63, 172)
+position = Vector2(-11.1358, 102)
 rotation = 2.55809
 texture = SubResource("CompressedTexture2D_v1mpx")
