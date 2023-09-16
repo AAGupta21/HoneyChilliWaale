@@ -1,16 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccch4f1wxr8is"]
+[gd_scene load_steps=2 format=3 uid="uid://xbm38rghbc6j"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cbiex"]
-blend_mode = 1
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0l0bq"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3kbl8"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
 [node name="S23" type="Sprite2D"]
-modulate = Color(0.45098, 0, 0.647059, 1)
-material = SubResource("CanvasItemMaterial_cbiex")
-position = Vector2(1792, 576)
-texture = SubResource("CompressedTexture2D_0l0bq")
+texture_filter = 1
+texture = SubResource("CompressedTexture2D_3kbl8")
 region_enabled = true
 region_rect = Rect2(1533, 512, 256, 256)
