@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://baolprm0jtvpw"]
+[gd_scene load_steps=5 format=3 uid="uid://baolprm0jtvpw"]
 
 [ext_resource type="Script" path="res://Scripts/Level/LevelGenerator.cs" id="1_ydltc"]
-[ext_resource type="Texture2D" uid="uid://cmhctja3mvpgc" path="res://Art/Background.png" id="2_yeu4u"]
+[ext_resource type="Texture2D" uid="uid://c47hbih4od5uk" path="res://Art/Levels_BG.png" id="2_2qom6"]
+[ext_resource type="PackedScene" uid="uid://ct24xnem5vckq" path="res://Scenes/Prefabs/input_symbol_prefab.tscn" id="3_twp6y"]
+[ext_resource type="PackedScene" uid="uid://dpuhnilh24ws0" path="res://Art/SymbolScenes/s_1.tscn" id="4_sh8wm"]
 
 [node name="LevelGenerator" type="Node" node_paths=PackedStringArray("_targetParent", "_targetMainParent", "_inputPanel")]
 script = ExtResource("1_ydltc")
@@ -14,8 +16,8 @@ _targetParent = NodePath("TargetParent")
 _targetMainParent = NodePath("MainGamePlay")
 _inputPanel = NodePath("HBoxContainer")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_yeu4u")
+[node name="BG" type="Sprite2D" parent="."]
+texture = ExtResource("2_2qom6")
 centered = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -27,8 +29,19 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 10
 
+[node name="InputSymbolPrefab" parent="HBoxContainer" instance=ExtResource("3_twp6y")]
+visible = false
+self_modulate = Color(1, 1, 1, 0.156863)
+layout_mode = 2
+focus_mode = 0
+flat = true
+
+[node name="S1" parent="HBoxContainer/InputSymbolPrefab" instance=ExtResource("4_sh8wm")]
+position = Vector2(75, 75)
+scale = Vector2(0.56, 0.56)
+
 [node name="TargetParent" type="Node2D" parent="."]
-position = Vector2(1682.65, 859.045)
+position = Vector2(1682.65, 820.7)
 
 [node name="MainGamePlay" type="Node2D" parent="."]
-position = Vector2(910, 500)
+position = Vector2(820.69, 500)

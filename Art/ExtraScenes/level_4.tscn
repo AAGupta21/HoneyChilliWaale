@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbyyldddhorb5"]
+[gd_scene load_steps=5 format=3 uid="uid://dbyyldddhorb5"]
 
 [ext_resource type="PackedScene" uid="uid://caqdml7bejpvi" path="res://Art/SymbolScenes/s_6.tscn" id="1_q7t4m"]
-[ext_resource type="Texture2D" uid="uid://d2s40kdnl8mu6" path="res://Art/Symbols.png" id="2_8nfrw"]
 [ext_resource type="PackedScene" uid="uid://p5t2w4got0xq" path="res://Art/SymbolScenes/s_20.tscn" id="2_nt0y8"]
 [ext_resource type="PackedScene" uid="uid://c4mddb0qhvk36" path="res://Art/SymbolScenes/s_25.tscn" id="3_d6cx2"]
 [ext_resource type="PackedScene" uid="uid://doogtxjwq080i" path="res://Art/SymbolScenes/s_32.tscn" id="4_qao4t"]
@@ -11,18 +10,14 @@
 [node name="S6" parent="." instance=ExtResource("1_q7t4m")]
 position = Vector2(-118, 2.00001)
 rotation = -2.19131
-texture = ExtResource("2_8nfrw")
 
 [node name="S20" parent="." instance=ExtResource("2_nt0y8")]
 position = Vector2(9, -7)
-texture = ExtResource("2_8nfrw")
 
 [node name="S25" parent="." instance=ExtResource("3_d6cx2")]
 position = Vector2(41, 74)
 rotation = 3.16412
-texture = ExtResource("2_8nfrw")
 
 [node name="S32" parent="." instance=ExtResource("4_qao4t")]
 position = Vector2(-99, 19)
 rotation = 0.214416
-texture = ExtResource("2_8nfrw")

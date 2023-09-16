@@ -12,4 +12,14 @@ public partial class Levels : Node
 		
 		return _levels[index];
 	}
+
+	public int GetNextLevel(int level)
+	{
+		if (level >= _levels.Count)
+		{
+			return -1;
+		}
+
+		return ++level;
+	}
 }

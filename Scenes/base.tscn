@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://d3d82wsqv8o4d"]
+
+[ext_resource type="Script" path="res://Scripts/Manager.cs" id="1_gphcm"]
+[ext_resource type="Texture2D" uid="uid://5oiue3cshm12" path="res://Art/MainMenu.png" id="2_qblpw"]
+[ext_resource type="Texture2D" uid="uid://crng36cqp6133" path="res://Art/Box_Trans.png" id="3_845iv"]
+
+[sub_resource type="Theme" id="Theme_osn8l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ajrcd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4drbn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5i3qf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lojk4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdgpj"]
+
+[node name="Base" type="Node2D" node_paths=PackedStringArray("_playButton", "_mainMenu")]
+script = ExtResource("1_gphcm")
+_playButton = NodePath("MainMenu_BG/Button")
+_mainMenu = NodePath("MainMenu_BG")
+_levelGeneratorPath = "res://Scenes/level_generator.tscn"
+
+[node name="MainMenu_BG" type="Sprite2D" parent="."]
+texture = ExtResource("2_qblpw")
+centered = false
+
+[node name="Button" type="Button" parent="MainMenu_BG"]
+offset_left = 737.0
+offset_top = 240.0
+offset_right = 1156.0
+offset_bottom = 380.0
+theme = SubResource("Theme_osn8l")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ajrcd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4drbn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5i3qf")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lojk4")
+theme_override_styles/focus = SubResource("StyleBoxFlat_sdgpj")
+shortcut_feedback = false
+shortcut_in_tooltip = false
+icon = ExtResource("3_845iv")
+flat = true
+icon_alignment = 1
+expand_icon = true
