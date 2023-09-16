@@ -1,44 +1,29 @@
-[gd_scene load_steps=9 format=3 uid="uid://c67jx2du6j86a"]
+[gd_scene load_steps=6 format=3 uid="uid://c67jx2du6j86a"]
 
 [ext_resource type="PackedScene" uid="uid://cybyht8h2qyh" path="res://Art/SymbolScenes/s_11.tscn" id="1_jalg8"]
+[ext_resource type="Texture2D" uid="uid://d2s40kdnl8mu6" path="res://Art/Symbols.png" id="2_hn1y4"]
 [ext_resource type="PackedScene" uid="uid://beqoaxwn6lq67" path="res://Art/SymbolScenes/s_15.tscn" id="2_mcdj7"]
 [ext_resource type="PackedScene" uid="uid://btq378lw2h6aj" path="res://Art/SymbolScenes/s_19.tscn" id="3_l2esf"]
 [ext_resource type="PackedScene" uid="uid://3te543rv8jld" path="res://Art/SymbolScenes/s_22.tscn" id="4_t67xr"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b1xv8"]
-resource_local_to_scene = true
-load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pvkda"]
-resource_local_to_scene = true
-load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_68n8j"]
-resource_local_to_scene = true
-load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oycyu"]
-resource_local_to_scene = true
-load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
 [node name="Level3" type="Sprite2D"]
 
 [node name="S11" parent="." instance=ExtResource("1_jalg8")]
 position = Vector2(-93.886, -49.3011)
 rotation = 15.6992
-texture = SubResource("CompressedTexture2D_b1xv8")
+texture = ExtResource("2_hn1y4")
 
 [node name="S15" parent="." instance=ExtResource("2_mcdj7")]
 position = Vector2(7.11403, 93.6989)
 rotation = 3.09172
-texture = SubResource("CompressedTexture2D_pvkda")
+texture = ExtResource("2_hn1y4")
 
 [node name="S19" parent="." instance=ExtResource("3_l2esf")]
 position = Vector2(40.114, -59.3011)
 rotation = 1.58416
-texture = SubResource("CompressedTexture2D_68n8j")
+texture = ExtResource("2_hn1y4")
 
 [node name="S22" parent="." instance=ExtResource("4_t67xr")]
 position = Vector2(45.114, -28.3011)
 rotation = -3.15935
-texture = SubResource("CompressedTexture2D_oycyu")
+texture = ExtResource("2_hn1y4")

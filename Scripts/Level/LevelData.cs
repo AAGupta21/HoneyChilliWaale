@@ -3,7 +3,7 @@ using Godot.Collections;
 
 public partial class LevelData : Node
 {
-	[Export()] public Texture2D _baseImage = new Texture2D();
-	[Export()] public Array<Texture2D> _winningSymbols = new Array<Texture2D>();
-	[Export()] public Array<int> _winningIndex = new Array<int>();
+	[Export()] public Array<int> _rightNodesIndex = new Array<int>();
+	[Export()] public Array<int> _allNodesIndex = new Array<int>();
+	[Export()] public string _targetNodePath = "";
 }

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://sxp3h11vgimo"]
+
+[ext_resource type="Script" path="res://Scripts/Level/Levels.cs" id="1_wfa4q"]
+[ext_resource type="Script" path="res://Scripts/Level/LevelData.cs" id="2_inf8s"]
+
+[node name="Levels" type="Node" node_paths=PackedStringArray("_levels")]
+script = ExtResource("1_wfa4q")
+_levels = [NodePath("LevelDataTemplate")]
+
+[node name="LevelDataTemplate" type="Node" parent="."]
+script = ExtResource("2_inf8s")
+_rightNodesIndex = [1, 14, 26, 27]
+_allNodesIndex = [1, 14, 26, 27, 23, 21, 8, 3, 2, 6, 5, 11]
+_targetNodePath = "res://Art/ExtraScenes/level_1.tscn"

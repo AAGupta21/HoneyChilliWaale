@@ -1,42 +1,27 @@
-[gd_scene load_steps=9 format=3 uid="uid://chnq8mr5u61hg"]
+[gd_scene load_steps=6 format=3 uid="uid://chnq8mr5u61hg"]
 
 [ext_resource type="PackedScene" uid="uid://cs2oibjxoe8o4" path="res://Art/SymbolScenes/s_10.tscn" id="1_h4day"]
+[ext_resource type="Texture2D" uid="uid://d2s40kdnl8mu6" path="res://Art/Symbols.png" id="2_jugib"]
 [ext_resource type="PackedScene" uid="uid://bk601twujewex" path="res://Art/SymbolScenes/s_16.tscn" id="2_tpqqh"]
 [ext_resource type="PackedScene" uid="uid://dwhmavrecfawa" path="res://Art/SymbolScenes/s_17.tscn" id="3_dkn20"]
 [ext_resource type="PackedScene" uid="uid://b34lr4s4718hu" path="res://Art/SymbolScenes/s_24.tscn" id="4_vbpny"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a80d4"]
-resource_local_to_scene = true
-load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f1l3l"]
-resource_local_to_scene = true
-load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a17k0"]
-resource_local_to_scene = true
-load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v1mpx"]
-resource_local_to_scene = true
-load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
 [node name="Level2" type="Sprite2D"]
 
 [node name="S10" parent="." instance=ExtResource("1_h4day")]
 position = Vector2(76.8642, -103)
-texture = SubResource("CompressedTexture2D_a80d4")
+texture = ExtResource("2_jugib")
 
 [node name="S16" parent="." instance=ExtResource("2_tpqqh")]
 position = Vector2(-80.1358, -24)
 rotation = 3.13874
-texture = SubResource("CompressedTexture2D_f1l3l")
+texture = ExtResource("2_jugib")
 
 [node name="S17" parent="." instance=ExtResource("3_dkn20")]
 position = Vector2(67.8642, -83)
-texture = SubResource("CompressedTexture2D_a17k0")
+texture = ExtResource("2_jugib")
 
 [node name="S24" parent="." instance=ExtResource("4_vbpny")]
 position = Vector2(-11.1358, 102)
 rotation = 2.55809
-texture = SubResource("CompressedTexture2D_v1mpx")
+texture = ExtResource("2_jugib")

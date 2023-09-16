@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="Honey Chilli Waale"
-run/main_scene="res://Scenes/Prefabs/LevelPrefab/levels.tscn"
 config/features=PackedStringArray("4.1", "C#", "Forward Plus")
 config/icon="res://Art/icon.svg"
 
@@ -23,10 +22,6 @@ LevelData="*res://Scripts/Level/LevelData.cs"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=1
-window/size/resizable=false
-window/size/borderless=true
-window/size/always_on_top=true
 
 [dotnet]
 
