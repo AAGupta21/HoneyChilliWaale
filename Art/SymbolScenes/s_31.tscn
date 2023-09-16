@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://df4d30axvm0al"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dx7uw"]
+resource_local_to_scene = true
+load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
+
+[node name="S31" type="Sprite2D"]
+texture_filter = 1
+texture = SubResource("CompressedTexture2D_dx7uw")
+region_enabled = true
+region_rect = Rect2(1533, 768, 256, 256)
