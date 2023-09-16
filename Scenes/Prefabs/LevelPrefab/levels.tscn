@@ -6,7 +6,7 @@
 
 [node name="Levels" type="Node" node_paths=PackedStringArray("_levels")]
 script = ExtResource("1_1j6si")
-_levels = [NodePath("LevelDataTemplate")]
+_levels = [NodePath("LevelDataTemplate"), NodePath("")]
 
 [node name="LevelDataTemplate" type="Node" parent="."]
 script = ExtResource("2_bh7jl")
