@@ -1,5 +1,7 @@
-[gd_scene load_steps=63 format=3 uid="uid://bnn63bp8fpk4v"]
+[gd_scene load_steps=66 format=3 uid="uid://bnn63bp8fpk4v"]
 
+[ext_resource type="Texture2D" uid="uid://cmhctja3mvpgc" path="res://Art/Background.png" id="1_1htoo"]
+[ext_resource type="PackedScene" uid="uid://chnq8mr5u61hg" path="res://Art/ExtraScenes/level_2.tscn" id="1_bgjyb"]
 [ext_resource type="PackedScene" uid="uid://dpuhnilh24ws0" path="res://Art/SymbolScenes/s_1.tscn" id="1_yiofv"]
 [ext_resource type="PackedScene" uid="uid://choh7b8ypyxey" path="res://Art/SymbolScenes/s_2.tscn" id="2_ui3jp"]
 [ext_resource type="PackedScene" uid="uid://d3esjme05g3f5" path="res://Art/SymbolScenes/s_3.tscn" id="3_0kruf"]
@@ -32,250 +34,277 @@
 [ext_resource type="PackedScene" uid="uid://cqounn4ukkxek" path="res://Art/SymbolScenes/s_30.tscn" id="30_th4kl"]
 [ext_resource type="PackedScene" uid="uid://df4d30axvm0al" path="res://Art/SymbolScenes/s_31.tscn" id="31_docbv"]
 [ext_resource type="PackedScene" uid="uid://doogtxjwq080i" path="res://Art/SymbolScenes/s_32.tscn" id="32_vx8ds"]
+[ext_resource type="PackedScene" uid="uid://cta6dsnvoy2b0" path="res://Art/ExtraScenes/level_1.tscn" id="34_ehxg3"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hnfoe"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ldave"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vskjk"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mmjbs"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wtgcj"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lnbh1"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0meot"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wuhsd"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8bm63"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gdaop"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_e02hj"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jj4gh"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cc08c"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jl3sk"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i311s"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n2u4j"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mp5xx"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qdvv4"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4jhmf"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uo2ax"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_42gxm"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ye78e"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h1pix"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4jjvy"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nlwih"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jx1us"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qqdg2"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vo08t"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_aqjuu"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q47g4"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l7iu7"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fvu5i"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p2wvt"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2qiws"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_flana"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vl7bw"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7w5ul"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y3l5m"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qlaj2"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ybh53"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5u2cb"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_36j5m"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q2cwe"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ujtou"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s8b6f"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_58ux7"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_57d8b"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h8p5n"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vdxqs"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nengs"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nwxrn"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d7pwn"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xt14l"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n5c52"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u8mgh"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g33a7"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ljitf"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vj6a0"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_otyly"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j38s8"]
 resource_local_to_scene = true
 load_path = "res://.godot/imported/Symbols.png-375d216cdd9354fe68e0627825a3262b.ctex"
 
 [node name="Symbols" type="Node2D"]
 
-[node name="S1" parent="." instance=ExtResource("1_yiofv")]
+[node name="Level1" parent="." instance=ExtResource("34_ehxg3")]
+position = Vector2(856, -628)
+
+[node name="Level2" parent="." instance=ExtResource("1_bgjyb")]
+position = Vector2(1507, -727)
+
+[node name="SelectedBox" type="Sprite2D" parent="."]
+self_modulate = Color(0.364706, 0.223529, 0.054902, 1)
+position = Vector2(-682, -637)
+scale = Vector2(0.166449, 0.269136)
+texture = ExtResource("1_1htoo")
+
+[node name="S33" parent="SelectedBox" instance=ExtResource("1_yiofv")]
+position = Vector2(-6.00732, -18.5781)
+scale = Vector2(6.00785, 3.71559)
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(-354, -636)
+scale = Vector2(0.166449, 0.269136)
+texture = ExtResource("1_1htoo")
+
+[node name="S38" parent="Background2" instance=ExtResource("2_ui3jp")]
+position = Vector2(-18.0232, 3.71558)
+scale = Vector2(6.00785, 3.71559)
 
 [node name="S2" parent="." instance=ExtResource("2_ui3jp")]
-position = Vector2(272, 0)
+position = Vector2(288, 8)
 
 [node name="S3" parent="." instance=ExtResource("3_0kruf")]
 position = Vector2(560, 0)
-texture = SubResource("CompressedTexture2D_hnfoe")
+texture = SubResource("CompressedTexture2D_ldave")
 
 [node name="S4" parent="." instance=ExtResource("4_v6swv")]
-position = Vector2(840, 0)
-texture = SubResource("CompressedTexture2D_vskjk")
+position = Vector2(840, -3)
+texture = SubResource("CompressedTexture2D_mmjbs")
 
 [node name="S5" parent="." instance=ExtResource("5_iygjw")]
 position = Vector2(1120, 0)
-texture = SubResource("CompressedTexture2D_wtgcj")
+texture = SubResource("CompressedTexture2D_lnbh1")
 
 [node name="S6" parent="." instance=ExtResource("6_sfd5j")]
 position = Vector2(1432, -8)
-texture = SubResource("CompressedTexture2D_0meot")
+texture = SubResource("CompressedTexture2D_wuhsd")
 
 [node name="S7" parent="." instance=ExtResource("7_ctm6d")]
 position = Vector2(1728, -8)
-texture = SubResource("CompressedTexture2D_8bm63")
+texture = SubResource("CompressedTexture2D_gdaop")
 
 [node name="S8" parent="." instance=ExtResource("8_df5p3")]
 position = Vector2(2024, -8)
-texture = SubResource("CompressedTexture2D_e02hj")
+texture = SubResource("CompressedTexture2D_jj4gh")
 
 [node name="S9" parent="." instance=ExtResource("9_rc0bx")]
 position = Vector2(8, 280)
-texture = SubResource("CompressedTexture2D_cc08c")
+texture = SubResource("CompressedTexture2D_jl3sk")
 
 [node name="S10" parent="." instance=ExtResource("10_wds0t")]
 position = Vector2(272, 288)
-texture = SubResource("CompressedTexture2D_i311s")
+texture = SubResource("CompressedTexture2D_n2u4j")
 
 [node name="S11" parent="." instance=ExtResource("11_gp7o4")]
 position = Vector2(560, 272)
-texture = SubResource("CompressedTexture2D_mp5xx")
+texture = SubResource("CompressedTexture2D_qdvv4")
 
 [node name="S12" parent="." instance=ExtResource("12_2rcoe")]
 position = Vector2(848, 280)
-texture = SubResource("CompressedTexture2D_4jhmf")
+texture = SubResource("CompressedTexture2D_uo2ax")
 
 [node name="S13" parent="." instance=ExtResource("13_4qbme")]
 position = Vector2(1144, 280)
-texture = SubResource("CompressedTexture2D_42gxm")
+texture = SubResource("CompressedTexture2D_ye78e")
 
 [node name="S14" parent="." instance=ExtResource("14_pbu7f")]
 position = Vector2(1440, 288)
-texture = SubResource("CompressedTexture2D_h1pix")
+texture = SubResource("CompressedTexture2D_4jjvy")
 
 [node name="S15" parent="." instance=ExtResource("15_5i4wn")]
 position = Vector2(1728, 280)
-texture = SubResource("CompressedTexture2D_nlwih")
+texture = SubResource("CompressedTexture2D_jx1us")
 
 [node name="S16" parent="." instance=ExtResource("16_6hplh")]
 position = Vector2(2024, 264)
-texture = SubResource("CompressedTexture2D_qqdg2")
+texture = SubResource("CompressedTexture2D_vo08t")
 
 [node name="S17" parent="." instance=ExtResource("17_j5l1e")]
 position = Vector2(24, 552)
-texture = SubResource("CompressedTexture2D_aqjuu")
+texture = SubResource("CompressedTexture2D_q47g4")
 
 [node name="S18" parent="." instance=ExtResource("18_qv6d5")]
 position = Vector2(304, 552)
-texture = SubResource("CompressedTexture2D_l7iu7")
+texture = SubResource("CompressedTexture2D_fvu5i")
 
 [node name="S19" parent="." instance=ExtResource("19_j0ecw")]
 position = Vector2(576, 544)
-texture = SubResource("CompressedTexture2D_p2wvt")
+texture = SubResource("CompressedTexture2D_2qiws")
 
 [node name="S20" parent="." instance=ExtResource("20_nsmw8")]
 position = Vector2(848, 544)
-texture = SubResource("CompressedTexture2D_flana")
+texture = SubResource("CompressedTexture2D_vl7bw")
 
 [node name="S21" parent="." instance=ExtResource("21_qq784")]
 position = Vector2(1136, 536)
-texture = SubResource("CompressedTexture2D_7w5ul")
+texture = SubResource("CompressedTexture2D_y3l5m")
 
 [node name="S22" parent="." instance=ExtResource("22_wh6h7")]
 position = Vector2(1416, 560)
-texture = SubResource("CompressedTexture2D_qlaj2")
+texture = SubResource("CompressedTexture2D_ybh53")
 
 [node name="S23" parent="." instance=ExtResource("23_tdrni")]
 position = Vector2(1728, 552)
-texture = SubResource("CompressedTexture2D_5u2cb")
+texture = SubResource("CompressedTexture2D_36j5m")
 
 [node name="S24" parent="." instance=ExtResource("24_37oeh")]
 position = Vector2(2024, 560)
-texture = SubResource("CompressedTexture2D_q2cwe")
+texture = SubResource("CompressedTexture2D_ujtou")
 
 [node name="S25" parent="." instance=ExtResource("25_qm8ht")]
 position = Vector2(8, 872)
-texture = SubResource("CompressedTexture2D_s8b6f")
+texture = SubResource("CompressedTexture2D_58ux7")
 
 [node name="S26" parent="." instance=ExtResource("26_3f17a")]
 position = Vector2(312, 864)
-texture = SubResource("CompressedTexture2D_57d8b")
+texture = SubResource("CompressedTexture2D_h8p5n")
 
 [node name="S27" parent="." instance=ExtResource("27_ny3ap")]
 position = Vector2(568, 848)
-texture = SubResource("CompressedTexture2D_vdxqs")
+texture = SubResource("CompressedTexture2D_nengs")
 
 [node name="S28" parent="." instance=ExtResource("28_5ftoe")]
 position = Vector2(856, 872)
-texture = SubResource("CompressedTexture2D_nwxrn")
+texture = SubResource("CompressedTexture2D_d7pwn")
 
 [node name="S29" parent="." instance=ExtResource("29_welti")]
 position = Vector2(1136, 840)
-texture = SubResource("CompressedTexture2D_xt14l")
+texture = SubResource("CompressedTexture2D_n5c52")
 
 [node name="S30" parent="." instance=ExtResource("30_th4kl")]
 position = Vector2(1432, 848)
-texture = SubResource("CompressedTexture2D_u8mgh")
+texture = SubResource("CompressedTexture2D_g33a7")
 
 [node name="S31" parent="." instance=ExtResource("31_docbv")]
 position = Vector2(1720, 840)
-texture = SubResource("CompressedTexture2D_ljitf")
+texture = SubResource("CompressedTexture2D_vj6a0")
 
 [node name="S32" parent="." instance=ExtResource("32_vx8ds")]
 position = Vector2(2024, 840)
-texture = SubResource("CompressedTexture2D_otyly")
+texture = SubResource("CompressedTexture2D_j38s8")
+
+[node name="S1" parent="." instance=ExtResource("1_yiofv")]
+scale = Vector2(1, 1)
