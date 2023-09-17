@@ -22,13 +22,13 @@ _targetNodePath = "res://Art/ExtraScenes/level_1.tscn"
 [node name="Level2" type="Node" parent="."]
 script = ExtResource("2_inf8s")
 _rightNodesIndex = [10, 16, 17, 24]
-_allNodesIndex = [10, 16, 17, 24, 23, 21, 8, 3, 2, 6, 5, 11]
+_allNodesIndex = [10, 16, 17, 24, 18, 26, 14, 23, 21, 22, 6, 9]
 _targetNodePath = "res://Art/ExtraScenes/level_2.tscn"
 
 [node name="Level3" type="Node" parent="."]
 script = ExtResource("2_inf8s")
 _rightNodesIndex = [1, 14, 26, 27]
-_allNodesIndex = [1, 14, 26, 27, 23, 21, 8, 3, 2, 6, 5, 11]
+_allNodesIndex = [11, 15, 19, 22, 21, 12, 17, 18, 31, 23, 13, 1]
 _targetNodePath = "res://Art/ExtraScenes/level_3.tscn"
 
 [node name="Level4" type="Node" parent="."]
