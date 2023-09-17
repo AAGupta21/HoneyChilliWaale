@@ -1,20 +1,37 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3d82wsqv8o4d"]
+[gd_scene load_steps=14 format=3 uid="uid://d3d82wsqv8o4d"]
 
 [ext_resource type="Script" path="res://Scripts/Manager.cs" id="1_gphcm"]
 [ext_resource type="Texture2D" uid="uid://5oiue3cshm12" path="res://Art/MainMenu.png" id="2_qblpw"]
 [ext_resource type="Texture2D" uid="uid://crng36cqp6133" path="res://Art/Box_Trans.png" id="3_845iv"]
 [ext_resource type="AudioStream" uid="uid://p4xs5x8gawts" path="res://Music/honey_chilli_wale.wav" id="4_l5yfk"]
+[ext_resource type="Texture2D" uid="uid://cmhctja3mvpgc" path="res://Art/Background.png" id="5_u7spg"]
+[ext_resource type="Texture2D" uid="uid://bfatcfx8bu7ei" path="res://Art/Icons.png" id="6_72n57"]
+[ext_resource type="FontFile" uid="uid://da3eadesvb17v" path="res://Art/Font/ArilonCondensed-gxzgY.ttf" id="7_p8hpm"]
+[ext_resource type="Texture2D" uid="uid://dlydyu8tp0fwp" path="res://Art/icon.svg" id="8_gdg4w"]
 
 [sub_resource type="Theme" id="Theme_osn8l"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5i3qf"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-draw_center = false
-border_color = Color(0.8, 0.8, 0.8, 0)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fsfxt"]
 
-[node name="Base" type="Node2D" node_paths=PackedStringArray("_playButton", "_mainMenu")]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wy3i2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t4qdv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wkyl2"]
+
+[node name="Base" type="Node2D" node_paths=PackedStringArray("_playButton", "_popupSprite", "_howToPlaySprite", "_creditsSprite", "_exitApplicationSprite", "_howToPlayButton", "_creditsButton", "_exitApplicationPopupButton", "_agreeApplicationQuitButton", "_disagreeApplicationQuitButton", "_closePopupButton", "_mainMenu")]
 script = ExtResource("1_gphcm")
 _playButton = NodePath("MainMenu_BG/Button")
+_popupSprite = NodePath("Popup_BG")
+_howToPlaySprite = NodePath("Popup_BG/How To Play Image")
+_creditsSprite = NodePath("Popup_BG/Credits Image")
+_exitApplicationSprite = NodePath("Popup_BG/Leave App Text Image")
+_howToPlayButton = NodePath("MainMenu_BG/Button2")
+_creditsButton = NodePath("MainMenu_BG/Button3")
+_exitApplicationPopupButton = NodePath("MainMenu_BG/Button4")
+_agreeApplicationQuitButton = NodePath("Popup_BG/Leave App Text Image/Yes")
+_disagreeApplicationQuitButton = NodePath("Popup_BG/Leave App Text Image/No")
+_closePopupButton = NodePath("Popup_BG/Close popup Button")
 _mainMenu = NodePath("MainMenu_BG")
 _levelGeneratorPath = "res://Scenes/level_generator.tscn"
 
@@ -41,7 +58,11 @@ theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5i3qf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fsfxt")
 shortcut_feedback = false
 shortcut_in_tooltip = false
 icon = ExtResource("3_845iv")
@@ -69,7 +90,11 @@ theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5i3qf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fsfxt")
 shortcut_feedback = false
 shortcut_in_tooltip = false
 icon = ExtResource("3_845iv")
@@ -96,7 +121,11 @@ theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5i3qf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fsfxt")
 shortcut_feedback = false
 shortcut_in_tooltip = false
 icon = ExtResource("3_845iv")
@@ -123,7 +152,11 @@ theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_styles/pressed = SubResource("StyleBoxFlat_5i3qf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fsfxt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fsfxt")
 shortcut_feedback = false
 shortcut_in_tooltip = false
 icon = ExtResource("3_845iv")
@@ -131,6 +164,73 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MainMenu_BG"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_l5yfk")
 autoplay = true
+
+[node name="Popup_BG" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(961, 547)
+scale = Vector2(-1.315, 1.24856)
+texture = ExtResource("5_u7spg")
+
+[node name="How To Play Image" type="Sprite2D" parent="Popup_BG"]
+visible = false
+texture = ExtResource("6_72n57")
+
+[node name="Credits Image" type="Sprite2D" parent="Popup_BG"]
+visible = false
+texture = ExtResource("8_gdg4w")
+
+[node name="Leave App Text Image" type="Sprite2D" parent="Popup_BG"]
+visible = false
+texture = ExtResource("6_72n57")
+
+[node name="Yes" type="Button" parent="Popup_BG/Leave App Text Image"]
+modulate = Color(0.621094, 0.277344, 0.0703125, 1)
+offset_left = 253.232
+offset_top = 190.619
+offset_right = 354.232
+offset_bottom = 277.619
+scale = Vector2(-1, 1)
+theme_override_fonts/font = ExtResource("7_p8hpm")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wy3i2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wy3i2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wy3i2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wy3i2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wy3i2")
+text = "Yes"
+
+[node name="No" type="Button" parent="Popup_BG/Leave App Text Image"]
+modulate = Color(0.619608, 0.278431, 0.0705882, 1)
+offset_left = 50.9506
+offset_top = 192.221
+offset_right = 151.951
+offset_bottom = 279.221
+scale = Vector2(-1, 1)
+theme_override_fonts/font = ExtResource("7_p8hpm")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t4qdv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_t4qdv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_t4qdv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_t4qdv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_t4qdv")
+text = "No
+"
+
+[node name="Close popup Button" type="Button" parent="Popup_BG"]
+modulate = Color(0.621094, 0.277344, 0.0703125, 1)
+offset_left = -723.954
+offset_top = -427.691
+offset_right = -587.954
+offset_bottom = -291.691
+scale = Vector2(0.948834, 1.02565)
+theme_override_fonts/font = ExtResource("7_p8hpm")
+theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wkyl2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wkyl2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wkyl2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wkyl2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wkyl2")
+text = "X"
