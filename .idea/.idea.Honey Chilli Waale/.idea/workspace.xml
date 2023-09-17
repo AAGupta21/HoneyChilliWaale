@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef8b1001-0409-45bb-b5f7-0143892d1e07" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Art/ExtraScenes/level_2.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Art/ExtraScenes/level_2.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Art/ExtraScenes/level_3.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Art/ExtraScenes/level_3.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Art/ExtraScenes/level_4.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Art/ExtraScenes/level_4.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Prefabs/input_symbol_prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Prefabs/input_symbol_prefab.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Prefabs/levels.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Prefabs/levels.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/level_generator.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/level_generator.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Level/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Level/LevelGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Level/Levels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Level/Levels.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Level/TempS.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Music/honey_chilli_wale.wav.import" beforeDir="false" afterPath="$PROJECT_DIR$/Music/honey_chilli_wale.wav.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/base.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/base.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Manager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +77,7 @@
       <workItem from="1694806440236" duration="25000" />
       <workItem from="1694806476292" duration="13370000" />
       <workItem from="1694850328361" duration="26869000" />
+      <workItem from="1694908378616" duration="661000" />
     </task>
     <servers />
   </component>

@@ -1,20 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://d3d82wsqv8o4d"]
+[gd_scene load_steps=7 format=3 uid="uid://d3d82wsqv8o4d"]
 
 [ext_resource type="Script" path="res://Scripts/Manager.cs" id="1_gphcm"]
 [ext_resource type="Texture2D" uid="uid://5oiue3cshm12" path="res://Art/MainMenu.png" id="2_qblpw"]
 [ext_resource type="Texture2D" uid="uid://crng36cqp6133" path="res://Art/Box_Trans.png" id="3_845iv"]
+[ext_resource type="AudioStream" uid="uid://p4xs5x8gawts" path="res://Music/honey_chilli_wale.wav" id="4_l5yfk"]
 
 [sub_resource type="Theme" id="Theme_osn8l"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ajrcd"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4drbn"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5i3qf"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lojk4"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdgpj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+border_color = Color(0.8, 0.8, 0.8, 0)
 
 [node name="Base" type="Node2D" node_paths=PackedStringArray("_playButton", "_mainMenu")]
 script = ExtResource("1_gphcm")
@@ -45,14 +41,96 @@ theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_ajrcd")
-theme_override_styles/hover = SubResource("StyleBoxFlat_4drbn")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_5i3qf")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_lojk4")
-theme_override_styles/focus = SubResource("StyleBoxFlat_sdgpj")
 shortcut_feedback = false
 shortcut_in_tooltip = false
 icon = ExtResource("3_845iv")
 flat = true
 icon_alignment = 1
 expand_icon = true
+
+[node name="Button2" type="Button" parent="MainMenu_BG"]
+offset_left = 594.0
+offset_top = 399.0
+offset_right = 1353.0
+offset_bottom = 539.0
+scale = Vector2(1, 1.20546)
+theme = SubResource("Theme_osn8l")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5i3qf")
+shortcut_feedback = false
+shortcut_in_tooltip = false
+icon = ExtResource("3_845iv")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button3" type="Button" parent="MainMenu_BG"]
+offset_left = 710.0
+offset_top = 574.0
+offset_right = 1150.0
+offset_bottom = 714.0
+theme = SubResource("Theme_osn8l")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5i3qf")
+shortcut_feedback = false
+shortcut_in_tooltip = false
+icon = ExtResource("3_845iv")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button4" type="Button" parent="MainMenu_BG"]
+offset_left = 735.0
+offset_top = 739.0
+offset_right = 1154.0
+offset_bottom = 879.0
+theme = SubResource("Theme_osn8l")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5i3qf")
+shortcut_feedback = false
+shortcut_in_tooltip = false
+icon = ExtResource("3_845iv")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MainMenu_BG"]
+stream = ExtResource("4_l5yfk")
+autoplay = true
