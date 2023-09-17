@@ -15,7 +15,12 @@ public partial class Manager : Node
     [Export()] private Button _agreeApplicationQuitButton;
     [Export()] private Button _disagreeApplicationQuitButton;
     [Export()] private Button _closePopupButton;
-
+    [Export()] private Node2D _audioPopUp;
+    [Export()] private AudioStreamPlayer2D _stream;
+    [Export()] private Button _audioOn;
+    [Export()] private Button _audioOff;
+    [Export()] private Sprite2D _audioOffParent;
+    [Export()] private Sprite2D _audioOnParent;
 
     [Export()] private Node2D _mainMenu;
     [Export()] private string _levelGeneratorPath;
@@ -31,8 +36,34 @@ public partial class Manager : Node
         _closePopupButton.ButtonUp += ClosePopupButton;
         _agreeApplicationQuitButton.ButtonUp += ApplicationQuitYesButton;
         _disagreeApplicationQuitButton.ButtonUp += ApplicationQuitNoButton;
+        _audioOn.ButtonUp += () =>
+        {
+            AudioButtonOnToggled(true);
+        };
 
+        _audioOff.ButtonUp += () =>
+        {
+            AudioButtonOnToggled(false);
+        };
+        
+        _audioOn.Visible = true;
         _mainMenu.Visible = true;
+    }
+
+    private void AudioButtonOnToggled(bool buttonpressed)
+    {
+        if (buttonpressed)
+        {
+            _stream.Playing = false;
+            _audioOnParent.Visible = false;
+            _audioOffParent.Visible = true;
+        }
+        else
+        {
+            _stream.Playing = true;
+            _audioOnParent.Visible = true;
+            _audioOffParent.Visible = false;
+        }
     }
 
     private void PlayButtonOnButtonUp()
@@ -70,12 +101,14 @@ public partial class Manager : Node
 
     private void PopupScreenVisiblity(bool state)
     {
+        _audioPopUp.Visible = !state;
         _mainMenu.Visible = !state;
         _popupSprite.Visible = state;
     }
 
     private void ClosePopupButton()
     {
+        _audioPopUp.Visible = true;
         _howToPlaySprite.Visible = false; 
         _creditsSprite.Visible = false; 
         _exitApplicationSprite.Visible = false;

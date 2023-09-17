@@ -142,6 +142,11 @@ public partial class LevelGenerator : Node
 
 	public void RestartLevel()
 	{
-		GetTree().ReloadCurrentScene();
+		_allSelectedIndexes.Clear();
+		
+		for (int i = 0; i < _mainNode.GetChildCount(); i++)
+		{
+			_mainNode.GetChild<Sprite2D>(i).Visible = false;
+		}
 	}
 }

@@ -1,6 +1,16 @@
-[gd_scene format=3 uid="uid://ct24xnem5vckq"]
+[gd_scene load_steps=4 format=3 uid="uid://ct24xnem5vckq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqfau"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ve76"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wvmtf"]
 
 [node name="InputSymbolPrefab" type="Button"]
-self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(150, 150)
+theme_override_styles/normal = SubResource("StyleBoxFlat_oqfau")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1ve76")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wvmtf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wvmtf")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wvmtf")
 icon_alignment = 1
