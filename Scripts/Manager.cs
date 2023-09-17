@@ -35,7 +35,6 @@ public partial class Manager : Node
         _exitApplicationPopupButton.ButtonUp += ExitApplicationPopupButton;
         _closePopupButton.ButtonUp += ClosePopupButton;
         _agreeApplicationQuitButton.ButtonUp += ApplicationQuitYesButton;
-        _disagreeApplicationQuitButton.ButtonUp += ApplicationQuitNoButton;
         _audioOn.ButtonUp += () =>
         {
             AudioButtonOnToggled(true);

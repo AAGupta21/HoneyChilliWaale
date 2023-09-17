@@ -1,22 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://baolprm0jtvpw"]
+[gd_scene load_steps=9 format=3 uid="uid://baolprm0jtvpw"]
 
 [ext_resource type="Script" path="res://Scripts/Level/LevelGenerator.cs" id="1_ydltc"]
 [ext_resource type="Texture2D" uid="uid://c47hbih4od5uk" path="res://Art/Levels_BG.png" id="2_2qom6"]
 [ext_resource type="PackedScene" uid="uid://ct24xnem5vckq" path="res://Scenes/Prefabs/input_symbol_prefab.tscn" id="3_twp6y"]
+[ext_resource type="Texture2D" uid="uid://dqnr6h1xillqi" path="res://Art/White_256.png" id="4_03n0m"]
 [ext_resource type="PackedScene" uid="uid://dpuhnilh24ws0" path="res://Art/SymbolScenes/s_1.tscn" id="4_sh8wm"]
+[ext_resource type="Texture2D" uid="uid://crng36cqp6133" path="res://Art/Box_Trans.png" id="5_bliut"]
+[ext_resource type="FontFile" uid="uid://da3eadesvb17v" path="res://Art/Font/ArilonCondensed-gxzgY.ttf" id="7_b6c2d"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3ev0"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pj6v3"]
+texture = ExtResource("4_03n0m")
 
-[node name="LevelGenerator" type="Node" node_paths=PackedStringArray("_targetParent", "_targetMainParent", "_inputPanel")]
+[node name="LevelGenerator" type="Node" node_paths=PackedStringArray("_targetParent", "_targetMainParent", "_inputPanel", "_richTextLabel")]
 script = ExtResource("1_ydltc")
-_colorButtonDefault = Color(1, 1, 1, 1)
-_colorButtonToggled = Color(0, 0, 0, 1)
+_colorButtonDefault = Color(1, 0.796078, 0.427451, 1)
+_colorButtonToggled = Color(0.505882, 0.203922, 0.0313726, 1)
 _inputSymbolPrefabPath = "res://Scenes/Prefabs/input_symbol_prefab.tscn"
 _levelDataPath = "res://Scenes/Prefabs/levels.tscn"
 _symbolPath = "res://Art/SymbolScenes/s"
 _targetParent = NodePath("TargetParent")
 _targetMainParent = NodePath("MainGamePlay")
 _inputPanel = NodePath("HBoxContainer")
+_richTextLabel = NodePath("RichTextLabel")
 
 [node name="BG" type="Sprite2D" parent="."]
 texture = ExtResource("2_2qom6")
@@ -33,10 +38,11 @@ theme_override_constants/separation = 10
 
 [node name="InputSymbolPrefab" parent="HBoxContainer" instance=ExtResource("3_twp6y")]
 visible = false
-self_modulate = Color(0.811765, 0.384314, 0.819608, 1)
 layout_mode = 2
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_n3ev0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pj6v3")
+icon = ExtResource("5_bliut")
+expand_icon = true
 
 [node name="S1" parent="HBoxContainer/InputSymbolPrefab" instance=ExtResource("4_sh8wm")]
 position = Vector2(75, 75)
@@ -47,3 +53,14 @@ position = Vector2(1682.65, 820.7)
 
 [node name="MainGamePlay" type="Node2D" parent="."]
 position = Vector2(680, 500)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 91.0
+offset_top = 924.0
+offset_right = 1291.0
+offset_bottom = 1026.2
+theme_override_colors/default_color = Color(0.597656, 0.386719, 0.253906, 1)
+theme_override_fonts/normal_font = ExtResource("7_b6c2d")
+theme_override_font_sizes/normal_font_size = 130
+scroll_active = false
+autowrap_mode = 0
