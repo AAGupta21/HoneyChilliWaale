@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d3d82wsqv8o4d"]
+[gd_scene load_steps=30 format=3 uid="uid://d3d82wsqv8o4d"]
 
 [ext_resource type="Script" path="res://Scripts/Manager.cs" id="1_gphcm"]
 [ext_resource type="Texture2D" uid="uid://5oiue3cshm12" path="res://Art/MainMenu.png" id="2_qblpw"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://p4xs5x8gawts" path="res://Music/honey_chilli_wale.wav" id="4_l5yfk"]
 [ext_resource type="Texture2D" uid="uid://cmhctja3mvpgc" path="res://Art/Background.png" id="5_u7spg"]
 [ext_resource type="Texture2D" uid="uid://bfatcfx8bu7ei" path="res://Art/Icons.png" id="6_72n57"]
+[ext_resource type="Texture2D" uid="uid://dqnr6h1xillqi" path="res://Art/White_256.png" id="6_pljfa"]
 [ext_resource type="FontFile" uid="uid://da3eadesvb17v" path="res://Art/Font/ArilonCondensed-gxzgY.ttf" id="7_p8hpm"]
 [ext_resource type="Texture2D" uid="uid://dlydyu8tp0fwp" path="res://Art/icon.svg" id="8_gdg4w"]
 
@@ -33,7 +34,20 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sintg"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p2im8"]
+texture = ExtResource("6_pljfa")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wy3i2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gyess"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04yce"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m6vsg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pdcsi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gtifx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wkyl2"]
 
@@ -47,7 +61,7 @@ _exitApplicationSprite = NodePath("Popup_BG/Leave App Text Image")
 _howToPlayButton = NodePath("MainMenu_BG/Button2")
 _creditsButton = NodePath("MainMenu_BG/Button3")
 _exitApplicationPopupButton = NodePath("MainMenu_BG/Button4")
-_agreeApplicationQuitButton = NodePath("Popup_BG/Leave App Text Image/Yes")
+_agreeApplicationQuitButton = NodePath("Popup_BG/Leave App Text Image/YesButton")
 _disagreeApplicationQuitButton = NodePath("")
 _closePopupButton = NodePath("Popup_BG/Close popup Button")
 _audioPopUp = NodePath("Audio")
@@ -246,10 +260,32 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_rwng0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_sintg")
 metadata/_edit_use_anchors_ = true
 
+[node name="PoemPanel" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="PoemPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_p2im8")
+
+[node name="ContButton" type="Button" parent="PoemPanel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [node name="Popup_BG" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(961, 547)
-scale = Vector2(-1.315, 1.053)
+scale = Vector2(1, 1.053)
 texture = ExtResource("5_u7spg")
 
 [node name="How To Play Image" type="Sprite2D" parent="Popup_BG"]
@@ -264,20 +300,19 @@ texture = ExtResource("8_gdg4w")
 visible = false
 
 [node name="Yes" type="Button" parent="Popup_BG/Leave App Text Image"]
-modulate = Color(0.621094, 0.277344, 0.0703125, 1)
+self_modulate = Color(0.592157, 0.380392, 0.25098, 1)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 300.443
-offset_top = -130.413
-offset_right = 1835.44
-offset_bottom = 180.587
+offset_left = -372.5
+offset_top = -23.292
+offset_right = 1162.5
+offset_bottom = 287.708
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -3.15206
-scale = Vector2(0.412, -0.433)
+scale = Vector2(0.412, 0.433)
 theme_override_fonts/font = ExtResource("7_p8hpm")
 theme_override_font_sizes/font_size = 400
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wy3i2")
@@ -288,12 +323,24 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_wy3i2")
 button_mask = 0
 text = "Please Dont :("
 
+[node name="YesButton" type="Button" parent="Popup_BG/Leave App Text Image"]
+offset_left = -399.0
+offset_top = -13.2953
+offset_right = 301.0
+offset_bottom = 86.7047
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gyess")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_04yce")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m6vsg")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_pdcsi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gtifx")
+flat = true
+
 [node name="Close popup Button" type="Button" parent="Popup_BG"]
-modulate = Color(0.621094, 0.277344, 0.0703125, 1)
-offset_left = -723.954
+self_modulate = Color(0.592157, 0.380392, 0.25098, 1)
+offset_left = 723.954
 offset_top = -427.691
-offset_right = -587.954
-offset_bottom = -291.691
+offset_right = 859.954
+offset_bottom = -271.691
 scale = Vector2(0.948834, 1.02565)
 theme_override_fonts/font = ExtResource("7_p8hpm")
 theme_override_font_sizes/font_size = 200
@@ -303,29 +350,3 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_wkyl2")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_wkyl2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wkyl2")
 text = "X"
-
-[node name="Popup_BG2" type="Sprite2D" parent="Popup_BG"]
-visible = false
-scale = Vector2(0.756654, 1)
-texture = ExtResource("5_u7spg")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Popup_BG/Popup_BG2"]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -2880.0
-offset_top = -1620.0
-offset_right = -960.0
-offset_bottom = -540.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "Hdsdsldkms"
-
-[node name="Sprite2D" type="Sprite2D" parent="Popup_BG/Popup_BG2"]
-
-[node name="Button" type="Button" parent="Popup_BG/Popup_BG2/Sprite2D"]
-offset_right = 8.0
-offset_bottom = 8.0

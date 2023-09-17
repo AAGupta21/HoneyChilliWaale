@@ -44,7 +44,6 @@ public partial class Manager : Node
         {
             AudioButtonOnToggled(false);
         };
-        
         _audioOn.Visible = true;
         _mainMenu.Visible = true;
     }
@@ -132,8 +131,4 @@ public partial class Manager : Node
         GD.Print("Exit application tab");
 
     }
-    
-    
-    
-    
 }

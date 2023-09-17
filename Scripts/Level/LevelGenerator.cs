@@ -27,7 +27,7 @@ public partial class LevelGenerator : Node
 	private Array<int> _allSelectedIndexes;
 	private LevelData _data;
 	private int _currentLevel;
-
+	
 	public void Setup()
 	{
 		_levelData = (ResourceLoader.Load(_levelDataPath) as PackedScene).Instantiate() as Levels;
@@ -124,15 +124,14 @@ public partial class LevelGenerator : Node
 				_currentLevel = _levelData.GetNextLevel(_currentLevel);
 				if (_currentLevel != -1)
 				{
-					ClearLevel();
-					LoadLevel(_currentLevel);
+					GetTree().ReloadCurrentScene();
 				}
 			}
 		}
 		else
 		{
 			//Loose...
-			RestartLevel();
+			GetTree().ReloadCurrentScene();
 		}
 	}
 
