@@ -7,8 +7,10 @@
     <list default="true" id="ef8b1001-0409-45bb-b5f7-0143892d1e07" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Honey Chilli Waale/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Honey Chilli Waale/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/Prefabs/input_symbol_prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Prefabs/input_symbol_prefab.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/Prefabs/levels.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/Prefabs/levels.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/base.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/base.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scenes/level_generator.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/level_generator.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Level/LevelData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Level/LevelData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Level/LevelGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Level/LevelGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Manager.cs" afterDir="false" />
     </list>
@@ -80,7 +82,7 @@
       <workItem from="1694806440236" duration="25000" />
       <workItem from="1694806476292" duration="13370000" />
       <workItem from="1694850328361" duration="26869000" />
-      <workItem from="1694908378616" duration="8287000" />
+      <workItem from="1694908378616" duration="12316000" />
     </task>
     <servers />
   </component>

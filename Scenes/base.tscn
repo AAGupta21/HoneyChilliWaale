@@ -13,10 +13,6 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fsfxt"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wy3i2"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wkyl2"]
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vyh83"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y1i28"]
@@ -37,7 +33,11 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sintg"]
 
-[node name="Base" type="Node2D" node_paths=PackedStringArray("_playButton", "_popupSprite", "_howToPlaySprite", "_creditsSprite", "_exitApplicationSprite", "_howToPlayButton", "_creditsButton", "_exitApplicationPopupButton", "_agreeApplicationQuitButton", "_disagreeApplicationQuitButton", "_closePopupButton", "_stream", "_audioOn", "_audioOff", "_audioOffParent", "_audioOnParent", "_mainMenu")]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wy3i2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wkyl2"]
+
+[node name="Base" type="Node2D" node_paths=PackedStringArray("_playButton", "_popupSprite", "_howToPlaySprite", "_creditsSprite", "_exitApplicationSprite", "_howToPlayButton", "_creditsButton", "_exitApplicationPopupButton", "_agreeApplicationQuitButton", "_disagreeApplicationQuitButton", "_closePopupButton", "_audioPopUp", "_stream", "_audioOn", "_audioOff", "_audioOffParent", "_audioOnParent", "_mainMenu")]
 script = ExtResource("1_gphcm")
 _playButton = NodePath("MainMenu_BG/Button")
 _popupSprite = NodePath("Popup_BG")
@@ -50,11 +50,12 @@ _exitApplicationPopupButton = NodePath("MainMenu_BG/Button4")
 _agreeApplicationQuitButton = NodePath("Popup_BG/Leave App Text Image/Yes")
 _disagreeApplicationQuitButton = NodePath("")
 _closePopupButton = NodePath("Popup_BG/Close popup Button")
-_stream = NodePath("Popup_BG/Audio/AudioStreamPlayer2D")
-_audioOn = NodePath("Popup_BG/Audio/AudioON/Button")
-_audioOff = NodePath("Popup_BG/Audio/AudioOFF/Button")
-_audioOffParent = NodePath("Popup_BG/Audio/AudioOFF")
-_audioOnParent = NodePath("Popup_BG/Audio/AudioON")
+_audioPopUp = NodePath("Audio")
+_stream = NodePath("Audio/AudioStreamPlayer2D")
+_audioOn = NodePath("Audio/AudioON/Button")
+_audioOff = NodePath("Audio/AudioOFF/Button")
+_audioOffParent = NodePath("Audio/AudioOFF")
+_audioOnParent = NodePath("Audio/AudioON")
 _mainMenu = NodePath("MainMenu_BG")
 _levelGeneratorPath = "res://Scenes/level_generator.tscn"
 
@@ -187,10 +188,68 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
+[node name="Audio" type="Node2D" parent="."]
+position = Vector2(961, 547)
+rotation = 3.14159
+scale = Vector2(1.315, 1.05326)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Audio"]
+position = Vector2(730.798, -438.103)
+rotation = 3.14159
+scale = Vector2(0.760456, -0.80092)
+stream = ExtResource("4_l5yfk")
+autoplay = true
+
+[node name="AudioOFF" type="Sprite2D" parent="Audio"]
+visible = false
+position = Vector2(-523.194, -434.099)
+rotation = 3.14159
+scale = Vector2(0.760456, -0.80092)
+texture = ExtResource("6_72n57")
+centered = false
+region_enabled = true
+region_rect = Rect2(254, 0, 257, 253)
+
+[node name="Button" type="Button" parent="Audio/AudioOFF"]
+show_behind_parent = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vyh83")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_y1i28")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2pl3m")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_a53l3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1f7bk")
+
+[node name="AudioON" type="Sprite2D" parent="Audio"]
+position = Vector2(-523.954, -434.099)
+rotation = 3.14159
+scale = Vector2(0.760456, -0.80092)
+texture = ExtResource("6_72n57")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 253)
+
+[node name="Button" type="Button" parent="Audio/AudioON"]
+show_behind_parent = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7kjpa")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8532y")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_h1qx0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_rwng0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sintg")
+metadata/_edit_use_anchors_ = true
+
 [node name="Popup_BG" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(961, 547)
-scale = Vector2(-1.315, 1.24856)
+scale = Vector2(-1.315, 1.053)
 texture = ExtResource("5_u7spg")
 
 [node name="How To Play Image" type="Sprite2D" parent="Popup_BG"]
@@ -202,6 +261,7 @@ visible = false
 texture = ExtResource("8_gdg4w")
 
 [node name="Leave App Text Image" type="Sprite2D" parent="Popup_BG"]
+visible = false
 
 [node name="Yes" type="Button" parent="Popup_BG/Leave App Text Image"]
 modulate = Color(0.621094, 0.277344, 0.0703125, 1)
@@ -244,57 +304,28 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_wkyl2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wkyl2")
 text = "X"
 
-[node name="Audio" type="Node2D" parent="Popup_BG"]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Popup_BG/Audio"]
-position = Vector2(730.798, -438.103)
-rotation = 3.14159
-scale = Vector2(0.760456, -0.80092)
-stream = ExtResource("4_l5yfk")
-autoplay = true
-
-[node name="AudioOFF" type="Sprite2D" parent="Popup_BG/Audio"]
+[node name="Popup_BG2" type="Sprite2D" parent="Popup_BG"]
 visible = false
-position = Vector2(-523.194, -434.099)
-rotation = 3.14159
-scale = Vector2(0.760456, -0.80092)
-texture = ExtResource("6_72n57")
-centered = false
-region_enabled = true
-region_rect = Rect2(254, 0, 257, 253)
+scale = Vector2(0.756654, 1)
+texture = ExtResource("5_u7spg")
 
-[node name="Button" type="Button" parent="Popup_BG/Audio/AudioOFF"]
-show_behind_parent = true
-anchors_preset = 15
+[node name="RichTextLabel" type="RichTextLabel" parent="Popup_BG/Popup_BG2"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_vyh83")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_y1i28")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_2pl3m")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_a53l3")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_1f7bk")
+offset_left = -2880.0
+offset_top = -1620.0
+offset_right = -960.0
+offset_bottom = -540.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Hdsdsldkms"
 
-[node name="AudioON" type="Sprite2D" parent="Popup_BG/Audio"]
-position = Vector2(-523.954, -434.099)
-rotation = 3.14159
-scale = Vector2(0.760456, -0.80092)
-texture = ExtResource("6_72n57")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 240, 253)
+[node name="Sprite2D" type="Sprite2D" parent="Popup_BG/Popup_BG2"]
 
-[node name="Button" type="Button" parent="Popup_BG/Audio/AudioON"]
-show_behind_parent = true
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_7kjpa")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_8532y")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_h1qx0")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_rwng0")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_sintg")
-metadata/_edit_use_anchors_ = true
+[node name="Button" type="Button" parent="Popup_BG/Popup_BG2/Sprite2D"]
+offset_right = 8.0
+offset_bottom = 8.0

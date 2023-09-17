@@ -18,7 +18,7 @@ public partial class LevelGenerator : Node
 	
 	[Export()] private HBoxContainer _inputPanel;
 	
-	[Export()] private Texture2D _defaultSprite;
+	[Export()] private RichTextLabel _richTextLabel;
 
 	private Levels _levelData;
 	private Sprite2D _mainNode;
@@ -52,7 +52,7 @@ public partial class LevelGenerator : Node
 
 			// button.AddThemeStyleboxOverride("default", styleBox);
 
-			// button.SelfModulate = _colorButtonDefault;
+			button.SelfModulate = _colorButtonDefault;
 			
 			button.AddChild(sprite);
 			sprite.Position = new Vector2(75f, 75f);
@@ -64,6 +64,7 @@ public partial class LevelGenerator : Node
 			nodeIndex++;
 			button.ButtonUp += (() =>
 			{
+				button.SelfModulate = _colorButtonToggled;
 				_selectedIndex = button.GetIndex();
 				ButtonOnButtonUp();
 			});
@@ -93,6 +94,7 @@ public partial class LevelGenerator : Node
 		{
 			_inputPanel.GetChild<Button>(_selectedIndex).SelfModulate = _colorButtonToggled;
 			_allSelectedIndexes.Add(i);
+			_allSelectedIndexes.Sort();
 			CheckWin(i);
 		}
 	}
@@ -108,6 +110,15 @@ public partial class LevelGenerator : Node
 				_mainNode.GetChild<Sprite2D>(tempNode.GetIndex()).Visible = true;
 			}
 
+			var str = "";
+
+			foreach (var i in _allSelectedIndexes)
+			{
+				str += _data._nodesText[i] + " ";
+			}
+
+			_richTextLabel.Text = str;
+			
 			if (_data._rightNodesIndex.Count == _allSelectedIndexes.Count)
 			{
 				_currentLevel = _levelData.GetNextLevel(_currentLevel);
@@ -132,6 +143,7 @@ public partial class LevelGenerator : Node
 			_inputPanel.GetChild(i).QueueFree();
 		}
 
+		_richTextLabel.Text = "";
 		_mainNode = null;
 		_targetMainParent.GetChild(0).QueueFree();
 		_targetParent.GetChild(0).QueueFree();
@@ -143,6 +155,12 @@ public partial class LevelGenerator : Node
 	public void RestartLevel()
 	{
 		_allSelectedIndexes.Clear();
+		_richTextLabel.Text = "";
+
+		for (int i = 0; i < _inputPanel.GetChildCount(); i++)
+		{
+			_inputPanel.GetChild<Button>(i).SelfModulate = _colorButtonDefault;
+		}
 		
 		for (int i = 0; i < _mainNode.GetChildCount(); i++)
 		{
