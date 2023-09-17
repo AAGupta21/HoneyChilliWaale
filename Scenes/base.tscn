@@ -6,9 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://p4xs5x8gawts" path="res://Music/honey_chilli_wale.wav" id="4_l5yfk"]
 [ext_resource type="Texture2D" uid="uid://cmhctja3mvpgc" path="res://Art/Background.png" id="5_u7spg"]
 [ext_resource type="Texture2D" uid="uid://bfatcfx8bu7ei" path="res://Art/Icons.png" id="6_72n57"]
-[ext_resource type="Texture2D" uid="uid://dqnr6h1xillqi" path="res://Art/White_256.png" id="6_pljfa"]
+[ext_resource type="Texture2D" uid="uid://7r78rojqkmbd" path="res://Art/HowToPlay_Screen.png" id="7_1yen2"]
+[ext_resource type="Texture2D" uid="uid://yryf7r2v7vuj" path="res://Art/Credits.png" id="7_dp685"]
 [ext_resource type="FontFile" uid="uid://da3eadesvb17v" path="res://Art/Font/ArilonCondensed-gxzgY.ttf" id="7_p8hpm"]
-[ext_resource type="Texture2D" uid="uid://dlydyu8tp0fwp" path="res://Art/icon.svg" id="8_gdg4w"]
+[ext_resource type="Texture2D" uid="uid://c3gjey7vy13ys" path="res://Art/X_Box.png" id="10_fec7c"]
 
 [sub_resource type="Theme" id="Theme_osn8l"]
 
@@ -33,9 +34,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rwng0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sintg"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p2im8"]
-texture = ExtResource("6_pljfa")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wy3i2"]
 
@@ -78,10 +76,10 @@ texture = ExtResource("2_qblpw")
 centered = false
 
 [node name="Button" type="Button" parent="MainMenu_BG"]
-offset_left = 737.0
-offset_top = 240.0
-offset_right = 1156.0
-offset_bottom = 380.0
+offset_left = 736.0
+offset_top = 339.0
+offset_right = 1155.0
+offset_bottom = 479.0
 theme = SubResource("Theme_osn8l")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -109,10 +107,10 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Button2" type="Button" parent="MainMenu_BG"]
-offset_left = 594.0
-offset_top = 399.0
-offset_right = 1353.0
-offset_bottom = 539.0
+offset_left = 593.0
+offset_top = 498.0
+offset_right = 1352.0
+offset_bottom = 638.0
 scale = Vector2(1, 1.20546)
 theme = SubResource("Theme_osn8l")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -141,10 +139,10 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Button3" type="Button" parent="MainMenu_BG"]
-offset_left = 710.0
-offset_top = 574.0
-offset_right = 1150.0
-offset_bottom = 714.0
+offset_left = 709.0
+offset_top = 673.0
+offset_right = 1149.0
+offset_bottom = 813.0
 theme = SubResource("Theme_osn8l")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -172,10 +170,10 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="Button4" type="Button" parent="MainMenu_BG"]
-offset_left = 735.0
-offset_top = 739.0
-offset_right = 1154.0
-offset_bottom = 879.0
+offset_left = 734.0
+offset_top = 838.0
+offset_right = 1153.0
+offset_bottom = 978.0
 theme = SubResource("Theme_osn8l")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -260,28 +258,6 @@ theme_override_styles/disabled = SubResource("StyleBoxEmpty_rwng0")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_sintg")
 metadata/_edit_use_anchors_ = true
 
-[node name="PoemPanel" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Panel" type="Panel" parent="PoemPanel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_p2im8")
-
-[node name="ContButton" type="Button" parent="PoemPanel"]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-
 [node name="Popup_BG" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(961, 547)
@@ -290,11 +266,11 @@ texture = ExtResource("5_u7spg")
 
 [node name="How To Play Image" type="Sprite2D" parent="Popup_BG"]
 visible = false
-texture = ExtResource("6_72n57")
+texture = ExtResource("7_1yen2")
 
 [node name="Credits Image" type="Sprite2D" parent="Popup_BG"]
 visible = false
-texture = ExtResource("8_gdg4w")
+texture = ExtResource("7_dp685")
 
 [node name="Leave App Text Image" type="Sprite2D" parent="Popup_BG"]
 visible = false
@@ -336,12 +312,11 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_gtifx")
 flat = true
 
 [node name="Close popup Button" type="Button" parent="Popup_BG"]
-self_modulate = Color(0.592157, 0.380392, 0.25098, 1)
-offset_left = 723.954
-offset_top = -427.691
-offset_right = 859.954
-offset_bottom = -271.691
-scale = Vector2(0.948834, 1.02565)
+offset_left = 763.0
+offset_top = -479.582
+offset_right = 1019.0
+offset_bottom = -223.582
+scale = Vector2(0.6, 0.6)
 theme_override_fonts/font = ExtResource("7_p8hpm")
 theme_override_font_sizes/font_size = 200
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wkyl2")
@@ -349,4 +324,5 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_wkyl2")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_wkyl2")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_wkyl2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wkyl2")
-text = "X"
+icon = ExtResource("10_fec7c")
+flat = true

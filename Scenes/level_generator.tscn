@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://baolprm0jtvpw"]
+[gd_scene load_steps=16 format=3 uid="uid://baolprm0jtvpw"]
 
 [ext_resource type="Script" path="res://Scripts/Level/LevelGenerator.cs" id="1_ydltc"]
 [ext_resource type="Texture2D" uid="uid://c47hbih4od5uk" path="res://Art/Levels_BG.png" id="2_2qom6"]
@@ -7,11 +7,23 @@
 [ext_resource type="PackedScene" uid="uid://dpuhnilh24ws0" path="res://Art/SymbolScenes/s_1.tscn" id="4_sh8wm"]
 [ext_resource type="Texture2D" uid="uid://crng36cqp6133" path="res://Art/Box_Trans.png" id="5_bliut"]
 [ext_resource type="FontFile" uid="uid://da3eadesvb17v" path="res://Art/Font/ArilonCondensed-gxzgY.ttf" id="7_b6c2d"]
+[ext_resource type="Texture2D" uid="uid://dmjav2e628syp" path="res://Art/PoemScreen.png" id="8_3310o"]
+[ext_resource type="Texture2D" uid="uid://c8jceqh1mciiq" path="res://Art/RetryScreen.png" id="9_20ci8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pj6v3"]
 texture = ExtResource("4_03n0m")
 
-[node name="LevelGenerator" type="Node" node_paths=PackedStringArray("_targetParent", "_targetMainParent", "_inputPanel", "_richTextLabel")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_js5fa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvneb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_shvxb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rxjf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kyb8p"]
+
+[node name="LevelGenerator" type="Node" node_paths=PackedStringArray("_targetParent", "_targetMainParent", "_inputPanel", "_richTextLabel", "_winPanel", "_loosePanel", "_contButton", "_contExitButton", "_resultPanel", "_text1", "_text2", "_text3", "_text4")]
 script = ExtResource("1_ydltc")
 _colorButtonDefault = Color(1, 0.796078, 0.427451, 1)
 _colorButtonToggled = Color(0.505882, 0.203922, 0.0313726, 1)
@@ -22,6 +34,15 @@ _targetParent = NodePath("TargetParent")
 _targetMainParent = NodePath("MainGamePlay")
 _inputPanel = NodePath("HBoxContainer")
 _richTextLabel = NodePath("RichTextLabel")
+_winPanel = NodePath("ResultPanels/Win")
+_loosePanel = NodePath("ResultPanels/Loose")
+_contButton = NodePath("ResultPanels/ContButton")
+_contExitButton = NodePath("ResultPanels/GameOverContButton")
+_resultPanel = NodePath("ResultPanels")
+_text1 = NodePath("ResultPanels/Win/Text1")
+_text2 = NodePath("ResultPanels/Win/Text2")
+_text3 = NodePath("ResultPanels/Win/Text3")
+_text4 = NodePath("ResultPanels/Win/Text4")
 
 [node name="BG" type="Sprite2D" parent="."]
 texture = ExtResource("2_2qom6")
@@ -64,3 +85,135 @@ theme_override_fonts/normal_font = ExtResource("7_b6c2d")
 theme_override_font_sizes/normal_font_size = 130
 scroll_active = false
 autowrap_mode = 0
+
+[node name="ResultPanels" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 20.0
+offset_right = 5.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Win" type="Sprite2D" parent="ResultPanels"]
+visible = false
+texture = ExtResource("8_3310o")
+centered = false
+
+[node name="Text1" type="RichTextLabel" parent="ResultPanels/Win"]
+visible = false
+offset_left = 315.0
+offset_top = 255.0
+offset_right = 1815.0
+offset_bottom = 405.0
+theme_override_colors/default_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_fonts/normal_font = ExtResource("7_b6c2d")
+theme_override_font_sizes/normal_font_size = 130
+text = "Once in a land of mists and gold,"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="Text2" type="RichTextLabel" parent="ResultPanels/Win"]
+visible = false
+offset_left = 332.0
+offset_top = 439.0
+offset_right = 1832.0
+offset_bottom = 589.0
+theme_override_colors/default_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_fonts/normal_font = ExtResource("7_b6c2d")
+theme_override_font_sizes/normal_font_size = 130
+text = "A story's riddle began to unfold."
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="Text3" type="RichTextLabel" parent="ResultPanels/Win"]
+visible = false
+offset_left = 201.0
+offset_top = 605.0
+offset_right = 1701.0
+offset_bottom = 755.0
+theme_override_colors/default_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_fonts/normal_font = ExtResource("7_b6c2d")
+theme_override_font_sizes/normal_font_size = 130
+text = "Though the path was tangled and dense,"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="Text4" type="RichTextLabel" parent="ResultPanels/Win"]
+visible = false
+offset_left = 163.0
+offset_top = 761.0
+offset_right = 1763.0
+offset_bottom = 911.0
+theme_override_colors/default_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_fonts/normal_font = ExtResource("7_b6c2d")
+theme_override_font_sizes/normal_font_size = 130
+text = "One day, the tale would make perfect sense."
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+
+[node name="Loose" type="Sprite2D" parent="ResultPanels"]
+visible = false
+position = Vector2(0, -2)
+texture = ExtResource("9_20ci8")
+centered = false
+
+[node name="ContButton" type="Button" parent="ResultPanels"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 794.0
+offset_top = 769.0
+offset_right = 1104.0
+offset_bottom = 894.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_colors/font_pressed_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_colors/font_hover_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_colors/font_focus_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_colors/font_disabled_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_colors/font_outline_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_colors/icon_normal_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_colors/icon_pressed_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_colors/icon_hover_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_colors/icon_focus_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_colors/icon_disabled_color = Color(0.589844, 0.378906, 0.25, 1)
+theme_override_fonts/font = ExtResource("7_b6c2d")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxFlat_js5fa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yvneb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_shvxb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_7rxjf")
+theme_override_styles/focus = SubResource("StyleBoxFlat_kyb8p")
+text = "Proceed"
+flat = true
+
+[node name="GameOverContButton" type="Button" parent="ResultPanels"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 696.0
+offset_top = 610.0
+offset_right = 1246.0
+offset_bottom = 810.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

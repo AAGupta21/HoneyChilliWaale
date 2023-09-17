@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Godot;
 using Godot.Collections;
 
@@ -15,11 +16,15 @@ public partial class Levels : Node
 
 	public int GetNextLevel(int level)
 	{
+		Debug.Print("Level : " + level);
+		level++;
 		if (level >= _levels.Count)
 		{
+			Debug.Print("Return Level : -1");
 			return -1;
 		}
 
-		return ++level;
+		Debug.Print("Return Level : " + level);
+		return level;
 	}
 }

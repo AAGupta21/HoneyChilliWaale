@@ -21,7 +21,6 @@ public partial class Manager : Node
     [Export()] private Button _audioOff;
     [Export()] private Sprite2D _audioOffParent;
     [Export()] private Sprite2D _audioOnParent;
-
     [Export()] private Node2D _mainMenu;
     [Export()] private string _levelGeneratorPath;
     private LevelGenerator _levelGenerator;

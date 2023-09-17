@@ -19,6 +19,16 @@ public partial class LevelGenerator : Node
 	[Export()] private HBoxContainer _inputPanel;
 	
 	[Export()] private RichTextLabel _richTextLabel;
+	[Export()] private Node2D _winPanel;
+	[Export()] private Node2D _loosePanel;
+	[Export()] private Button _contButton;
+	[Export()] private Button _contExitButton;
+	[Export()] private Control _resultPanel;
+
+	[Export()] private RichTextLabel _text1;
+	[Export()] private RichTextLabel _text2;
+	[Export()] private RichTextLabel _text3;
+	[Export()] private RichTextLabel _text4;
 
 	private Levels _levelData;
 	private Sprite2D _mainNode;
@@ -27,7 +37,7 @@ public partial class LevelGenerator : Node
 	private Array<int> _allSelectedIndexes;
 	private LevelData _data;
 	private int _currentLevel;
-	
+
 	public void Setup()
 	{
 		_levelData = (ResourceLoader.Load(_levelDataPath) as PackedScene).Instantiate() as Levels;
@@ -84,11 +94,6 @@ public partial class LevelGenerator : Node
 
 	private void ButtonOnButtonUp()
 	{
-		Debug.Print("Starting: " + _selectedIndex);
-		foreach (var ind in _indexDict)
-		{
-			Debug.Print(ind.Key + " : " + ind.Value);
-		}
 		var i = _indexDict[_selectedIndex];
 		if (!_allSelectedIndexes.Contains(i))
 		{
@@ -118,20 +123,99 @@ public partial class LevelGenerator : Node
 			}
 
 			_richTextLabel.Text = str;
-			
 			if (_data._rightNodesIndex.Count == _allSelectedIndexes.Count)
 			{
+				_resultPanel.Visible = true;
 				_currentLevel = _levelData.GetNextLevel(_currentLevel);
+				SetText(_currentLevel);
+				_winPanel.Visible = true;
+				_contExitButton.Visible = false;
+				_loosePanel.Visible = false;
+				_contButton.Visible = true;
+				//Load the text based on level.
 				if (_currentLevel != -1)
 				{
-					GetTree().ReloadCurrentScene();
+					_contButton.Text = "Proceed";
+					//Load Next level.
+					_contButton.ButtonUp += () =>
+					{
+						_resultPanel.Visible = false;
+						_winPanel.Visible = false;
+						_loosePanel.Visible = false;
+						_contButton.Visible = false;
+						_contExitButton.Visible = false;
+						SetText(0);
+						ClearLevel();
+						LoadLevel(_currentLevel);
+					};
+				}
+				else
+				{
+					_contButton.Text = "Main Menu";
+					//Load Main Menu. Game finished.
+					_contButton.ButtonUp += () =>
+					{
+						_resultPanel.Visible = false;
+						_winPanel.Visible = false;
+						_loosePanel.Visible = false;
+						_contButton.Visible = false;
+						_contExitButton.Visible = false;
+						SetText(0);
+						GetTree().ReloadCurrentScene();
+					};
 				}
 			}
 		}
 		else
 		{
-			//Loose...
-			GetTree().ReloadCurrentScene();
+			_resultPanel.Visible = true;
+			_winPanel.Visible = false;
+			_loosePanel.Visible = true;
+			_contExitButton.Visible = true;
+			_contButton.Visible = false;
+			_contExitButton.ButtonUp += () =>
+			{
+				_resultPanel.Visible = false;
+				_winPanel.Visible = false;
+				_loosePanel.Visible = false;
+				_contButton.Visible = false;
+				_contExitButton.Visible = false;
+				SetText(0);
+				GetTree().ReloadCurrentScene();
+			};
+			//Loose
+		}
+	}
+
+	private void SetText(int index)
+	{
+		switch (index)
+		{
+			case 2:
+				_text1.Visible = true;
+				break;
+			case 3:
+				_text1.Visible = true;
+				_text2.Visible = true;
+				break;
+			case 4:
+				_text1.Visible = true;
+				_text2.Visible = true;
+				_text3.Visible = true;
+				break;
+			case -1:
+				
+				_text1.Visible = true;
+				_text2.Visible = true;
+				_text3.Visible = true;
+				_text4.Visible = true;
+				break;
+			default:
+				_text1.Visible = false;
+				_text2.Visible = false;
+				_text3.Visible = false;
+				_text4.Visible = false;
+				break;
 		}
 	}
 
