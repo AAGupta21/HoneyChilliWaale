@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://d3d82wsqv8o4d"]
+[gd_scene load_steps=35 format=3 uid="uid://d3d82wsqv8o4d"]
 
 [ext_resource type="Script" path="res://Scripts/Manager.cs" id="1_gphcm"]
 [ext_resource type="Texture2D" uid="uid://5oiue3cshm12" path="res://Art/MainMenu.png" id="2_qblpw"]
@@ -35,6 +35,16 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sintg"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_stpnn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nvbft"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gkc2j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vnc1n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n7ltu"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wy3i2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gyess"]
@@ -49,7 +59,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wkyl2"]
 
-[node name="Base" type="Node2D" node_paths=PackedStringArray("_playButton", "_popupSprite", "_howToPlaySprite", "_creditsSprite", "_exitApplicationSprite", "_howToPlayButton", "_creditsButton", "_exitApplicationPopupButton", "_agreeApplicationQuitButton", "_disagreeApplicationQuitButton", "_closePopupButton", "_audioPopUp", "_stream", "_audioOn", "_audioOff", "_audioOffParent", "_audioOnParent", "_mainMenu")]
+[node name="Base" type="Node2D" node_paths=PackedStringArray("_playButton", "_popupSprite", "_howToPlaySprite", "_creditsSprite", "_exitApplicationSprite", "_howToPlayButton", "_creditsButton", "_exitApplicationPopupButton", "_agreeApplicationQuitButton", "_disagreeApplicationQuitButton", "_closePopupButton", "_audioPopUp", "_stream", "_audioOn", "_audioOff", "_audioOffParent", "_audioOnParent", "_mainMenu", "_linkAakash", "_linkChari", "_linkHiren", "_linkDas")]
 script = ExtResource("1_gphcm")
 _playButton = NodePath("MainMenu_BG/Button")
 _popupSprite = NodePath("Popup_BG")
@@ -70,6 +80,10 @@ _audioOffParent = NodePath("Audio/AudioOFF")
 _audioOnParent = NodePath("Audio/AudioON")
 _mainMenu = NodePath("MainMenu_BG")
 _levelGeneratorPath = "res://Scenes/level_generator.tscn"
+_linkAakash = NodePath("Popup_BG/Credits Image/LinkAakash")
+_linkChari = NodePath("Popup_BG/Credits Image/LinkChari")
+_linkHiren = NodePath("Popup_BG/Credits Image/LinkHiren")
+_linkDas = NodePath("Popup_BG/Credits Image/LinkAbhinav")
 
 [node name="MainMenu_BG" type="Sprite2D" parent="."]
 texture = ExtResource("2_qblpw")
@@ -271,6 +285,54 @@ texture = ExtResource("7_1yen2")
 [node name="Credits Image" type="Sprite2D" parent="Popup_BG"]
 visible = false
 texture = ExtResource("7_dp685")
+
+[node name="LinkAakash" type="Button" parent="Popup_BG/Credits Image"]
+offset_left = -485.0
+offset_top = -291.548
+offset_right = 465.0
+offset_bottom = -175.653
+theme_override_styles/normal = SubResource("StyleBoxEmpty_stpnn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nvbft")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gkc2j")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vnc1n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n7ltu")
+flat = true
+
+[node name="LinkChari" type="Button" parent="Popup_BG/Credits Image"]
+offset_left = -464.0
+offset_top = -122.507
+offset_right = 486.0
+offset_bottom = -6.61215
+theme_override_styles/normal = SubResource("StyleBoxEmpty_stpnn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nvbft")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gkc2j")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vnc1n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n7ltu")
+flat = true
+
+[node name="LinkHiren" type="Button" parent="Popup_BG/Credits Image"]
+offset_left = -472.0
+offset_top = 44.6344
+offset_right = 478.0
+offset_bottom = 160.529
+theme_override_styles/normal = SubResource("StyleBoxEmpty_stpnn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nvbft")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gkc2j")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vnc1n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n7ltu")
+flat = true
+
+[node name="LinkAbhinav" type="Button" parent="Popup_BG/Credits Image"]
+offset_left = -474.0
+offset_top = 200.38
+offset_right = 476.0
+offset_bottom = 316.275
+theme_override_styles/normal = SubResource("StyleBoxEmpty_stpnn")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nvbft")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gkc2j")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vnc1n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n7ltu")
+flat = true
 
 [node name="Leave App Text Image" type="Sprite2D" parent="Popup_BG"]
 visible = false

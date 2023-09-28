@@ -20,4 +20,6 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_5y63q")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_wvmtf")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_wvmtf")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_wvmtf")
+action_mode = 0
+keep_pressed_outside = true
 icon_alignment = 1

@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Godot;
 
 public partial class Manager : Node
@@ -23,7 +24,15 @@ public partial class Manager : Node
     [Export()] private Sprite2D _audioOnParent;
     [Export()] private Node2D _mainMenu;
     [Export()] private string _levelGeneratorPath;
+
+    [Export()] private Button _linkAakash;
+    [Export()] private Button _linkChari;
+    [Export()] private Button _linkHiren;
+    [Export()] private Button _linkDas;
+    
     private LevelGenerator _levelGenerator;
+
+    private static int _audioSetting;
     
     public override void _Ready()
     {
@@ -45,6 +54,12 @@ public partial class Manager : Node
         };
         _audioOn.Visible = true;
         _mainMenu.Visible = true;
+        if (_audioSetting < 0)
+        {
+            AudioButtonOnToggled(true);
+        }
+
+        SetLinks();
     }
 
     private void AudioButtonOnToggled(bool buttonpressed)
@@ -54,12 +69,14 @@ public partial class Manager : Node
             _stream.Playing = false;
             _audioOnParent.Visible = false;
             _audioOffParent.Visible = true;
+            _audioSetting = -1;
         }
         else
         {
             _stream.Playing = true;
             _audioOnParent.Visible = true;
             _audioOffParent.Visible = false;
+            _audioSetting = 1;
         }
     }
 
@@ -129,5 +146,28 @@ public partial class Manager : Node
 
         GD.Print("Exit application tab");
 
+    }
+
+    private void SetLinks()
+    {
+        _linkAakash.ButtonDown += () =>
+        {
+            OS.ShellOpen("https://www.linkedin.com/in/aakash-gupta-944131139/");
+        };
+        
+        _linkChari.ButtonDown += () =>
+        {
+            OS.ShellOpen("https://www.linkedin.com/in/siddharth-chari-85787b155/");
+        };
+        
+        _linkHiren.ButtonDown += () =>
+        {
+            OS.ShellOpen("https://www.linkedin.com/in/hiren-sameja-8b454a13b/");   
+        };
+        
+        _linkDas.ButtonDown += () =>
+        {
+            OS.ShellOpen("https://www.linkedin.com/in/abhinav-das/");   
+        };
     }
 }
